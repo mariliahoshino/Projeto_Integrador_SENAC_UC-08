@@ -1,0 +1,39 @@
+@model IEnumerable<Vendas>
+
+@{
+    ViewData["Title"] = "Lista de Vendas";
+
+}
+
+<h3>Compras realizadas</h3>
+
+<table class = "table">
+
+    <thead class="thead-dark">
+
+        <tr>
+            <td>Id</td>
+            <td>Produto</td>
+            <td>Quantidade</td>
+            <td>Valor Unitário</td>
+            <!--
+            <td>Operações</td>
+            -->
+        </tr>
+    </thead>
+    @foreach (Vendas u in Model)
+    {
+                <tr>
+            <td>@u.Id</td>
+            <td>@u.Produto</td>
+            <td>@u.Quantidade</td>
+            <td>@u.ValorUnitario</td>
+            <!--
+            <td>
+                <a href = "/PacoteTuristico/Remover?Id=(a)u.Id" onclick="return confirm('Deseja mesmo excluir?');"> Remover </a>
+                <a href = "/PacoteTuristico/EditarPT?Id=(a)u.Id"> Alterar </a>
+            </td>
+            -->
+        </tr>
+    }
+</table>

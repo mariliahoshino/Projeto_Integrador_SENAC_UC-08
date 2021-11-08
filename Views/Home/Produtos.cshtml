@@ -1,0 +1,148 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+@model Carrinho;
+
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+
+
+
+
+
+
+<body>
+
+  <main>
+    
+      <a href="#"><img src="http://localhost:5000/images/Produtos/capacete_zarref.jpg" height="300" widht="300" alt="Capacete Zarref" title="Capacete Zarref"></a> <br>
+      <!--
+        <h4>Capacete TAURUS Zarref</h4> <br>
+      <h4>R$259,90 </h4><br>
+      -->
+
+    <form method="POST" asp-action="Produtos">
+      <label>Produto</label>
+      <input asp-for="produto" type="text" value="Capacete TAURUS Zarref"> <br>
+      <label>Quantidade </label>
+      <input asp-for="quantidade" type="text" value="1"> <br>
+      <label>Valor Unitário</label>
+      <input asp-for="valoruni" type="text" value="259,90"> <br>
+      <p>
+        <!-- <label asp-for="Usuario">Usuario:</label> -->
+        <input type="hidden" asp-for="Usuario" value=@Context.Session.GetInt32("IdUsuario")>
+        </p>
+    
+      <!--<input type="submit" value="Enviar">-->
+      <input type="submit" onclick="addcarrinho()" value="Adicionar ao Carrinho" button class="button button1"></button>
+
+    </form>
+
+    <!--<button class="button button1" >Adicionar ao carrinho</button>-->
+
+<!--
+      <input type="text" name="pesquisa" size="40" maxlenght="40" value="Digite o que deseja pesquisar">
+      -->
+
+      <!--
+      < asp-for="produto" ><button class="button button2">Adicionar ao Carrinho</button></a><br>  
+      -->
+
+      <!--
+      <form method="post">
+        <button asp-route="Carrinho">Click Me</button>
+        <input type="image" src="http://localhost:5000/images/Produtos/capacete_zarref.jpg" alt="Or Click Me" asp-route="Carrinho">
+      </form>  -->
+       
+      
+      
+      <a href="#"><img src="http://localhost:5000/images/Produtos/capacete_protork.jpg" alt="Capacete Pro Tork" height="300" widht="300" alt="Capacete Pro Tork" title="Capacete Pro Tork" ></a> <br>
+      <!--
+      <h4>Capacete Pro Tork</h4> <br>
+      <h4>R$159,90 </h4> <br>
+      <a href="#"><button class="button button3">Adicionar ao Carrinho</button></a><br> 
+      -->
+      <form method="POST">
+        <label>Produto</label>
+        <input asp-for="produto" type="text" value="Capacete Pro Tork"> <br>
+        <label>Quantidade </label>
+        <input asp-for="quantidade" type="text" value="1"> <br>
+        <label>Valor Unitário</label>
+        <input asp-for="valoruni" type="text" value="159,90"> <br>
+
+        <p>
+        <!-- <label asp-for="Usuario">Usuario:</label> -->
+        <input type="hidden" asp-for="Usuario" value=@Context.Session.GetInt32("IdUsuario")>
+        </p>
+
+
+        <input type="submit" onclick="addcarrinho()" value="Adicionar ao Carrinho" button class="button button1"></button>
+
+        
+        
+      </form>
+
+
+      <a href="#"><img src="http://localhost:5000/images/Produtos/capacete_protork_newlib3.jpg" alt="Capacete Pro Tork Liberty 3" height="300" widht="300" alt="Capacete Liberty 3" title="Capacete Liberty 3" ></a> <br>
+      <!--
+      <h4>Capacete PRO TORK Liberty 3</h4> <br>
+      <h4>R$89,90 </h4> <br>
+      <a href="#"><button class="button button3">Adicionar ao Carrinho</button></a><br> 
+      -->
+
+      <form method="POST">
+        <label>Produto</label>
+        <input asp-for="produto" type="text" value="Capacete Pro Tork Liberty 3"> <br>
+        <label>Quantidade </label>
+        <input asp-for="quantidade" type="text" value="1"> <br>
+        <label>Valor Unitário</label>
+        <input asp-for="valoruni" type="text" value="89,90"> <br>
+
+        <p>
+        <!-- <label asp-for="Usuario">Usuario:</label> -->
+        <input type="hidden" asp-for="Usuario" value=@Context.Session.GetInt32("IdUsuario")>
+        </p>
+
+        <input type="submit" onclick="addcarrinho()" value="Adicionar ao Carrinho" button class="button button1"></button>
+        
+      </form>
+
+
+      <a href="#"><img src="http://localhost:5000/images/Produtos/pneu_pirelli_supercity.jpg" alt="Pneu Pirelli" height="300" widht="300" alt="Pneu Pirelli" title="Pneu Pirelli" ></a> <br>
+      <!--
+      <h4>Pneu PIRELLI Dianteiro 2.75-18</h4> <br>
+      <h4>R$194,90 </h4> <br>
+      <a href="#"><button class="button button3">Adicionar ao Carrinho</button></a><br> 
+      -->
+
+      <form method="POST">
+        <label>Produto</label>
+        <input asp-for="produto" type="text" value="Pneu Pirelli Dianteiro 2.75-18"> <br>
+        <label>Quantidade </label>
+        <input asp-for="quantidade" type="text" value="1"> <br>
+        <label>Valor Unitário</label>
+        <input asp-for="valoruni" type="text" value="194,9"> <br>
+
+        <p>
+        <!-- <label asp-for="Usuario">Usuario:</label> -->
+        <input type="hidden" asp-for="Usuario" value=@Context.Session.GetInt32("IdUsuario")>
+        </p>
+
+
+        <input type="submit" value="Adicionar ao Carrinho" button class="button button1"></button>
+        
+      </form>
+      
+
+
+    </section>
+  </main>
+
+</body>
+
+
+
+
+

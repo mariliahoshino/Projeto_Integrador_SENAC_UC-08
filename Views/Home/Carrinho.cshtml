@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+@model List<Carrinho>
+
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+
+
+<body>
+
+  <main>
+    
+   
+
+         <table border = "1">
+    <thead>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Valor Unitário</th>
+    </thead>
+    <tbody>
+        @foreach (Carrinho lista in Model)
+        {
+            <tr>
+                <td>@lista.produto</td>
+                <td>@lista.quantidade</td>
+                <td>@lista.valoruni</td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
+
+<p> Total do Pedido: @InfoCarrinho.TotalizaPedido()</p>
+
+
+
+
+    </section>
+  </main>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
